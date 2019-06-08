@@ -2,18 +2,18 @@
   <div>
     <app-top-image />
     <app-funding-list />
-    <app-content />
+    <app-content-list />
   </div>
 </template>
 <script>
 import AppTopImage from '~/components/AppTopImage.vue'
 import AppFundingList from '~/components/AppFundingList.vue'
-import AppContent from '~/components/AppContent.vue'
+import AppContentList from '~/components/AppContentList.vue'
 export default {
   components: {
     AppTopImage,
     AppFundingList,
-    AppContent
+    AppContentList
   }
 }
 </script>

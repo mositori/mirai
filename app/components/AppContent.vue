@@ -11,9 +11,10 @@
           class="card-body">
           <!--<h3 
             class="card-title">nishida</h3>-->
-          <slot 
+          <h1 
             class="crad-title" 
-            name="head"/>
+            name="head">{{ title }}
+          </h1>
           <div class="progress">
             <div 
               class="progress-bar bg-success" 
@@ -40,6 +41,21 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  porps: {
+    title: {
+      type: String,
+      required: true
+    },
+    image: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 @import '~assets/scss/style';
 
