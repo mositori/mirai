@@ -1,11 +1,16 @@
 <template>
-  <app-top-image />
+  <div>
+    <app-top-image />
+    <app-funding-list />
+  </div>
 </template>
 <script>
 import AppTopImage from '~/components/AppTopImage.vue'
+import AppFundingList from '~/components/AppFundingList.vue'
 export default {
   components: {
-    AppTopImage
+    AppTopImage,
+    AppFundingList
   }
 }
 </script>
