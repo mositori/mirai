@@ -5,7 +5,7 @@
         <app-form />
       </div>
       <div class="col-md-3">
-        <post-console v-bind="config" />
+        <post-console />
       </div>
     </div>
     <button 
@@ -14,8 +14,9 @@
   </div>
 </template>
 <script>
+import { web3, contract } from '~/plugins/web3'
 import AppForm from '~/components/AppForm'
-import PostConsole from '~/components/Posts/PostConsole'
+import PostConsole from '~/components/Posts/PostConsole_'
 export default {
   components: {
     AppForm,

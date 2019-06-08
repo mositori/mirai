@@ -6,7 +6,7 @@
         <post-main-text />
       </div>
       <div class="col-md-3">
-        <post-console v-bind="config" />
+        <post-console/>
       </div>
     </div>
     <button 
@@ -16,7 +16,8 @@
 </template>
 <script>
 import { web3, contract } from '~/plugins/web3'
-import PostConsole from '~/components/Posts/PostConsole'
+import Vuex from 'vuex'
+import PostConsole from '~/components/Posts/PostConsole_'
 import PostMainText from '~/components/Posts/PostMainText'
 export default {
   components: {
@@ -30,21 +31,6 @@ export default {
         goalAmount: 0,
         numInvestors: 0
       }
-    }
-  },
-  created() {
-    contract.events.Funded((err, res) => {
-      if (!err) {
-        console.log(res)
-      }
-    })
-  },
-  methods: {
-    show() {
-      console.log(contract.events.Funded())
-    },
-    fund(_amount) {
-      contract.methods.fund().send({})
     }
   }
 }

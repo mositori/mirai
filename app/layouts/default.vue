@@ -8,11 +8,19 @@
 <script>
 import AppHeader from '~/components/AppHeader.vue'
 import AppFooter from '~/components/AppFooter.vue'
-
+import Vuex from 'vuex'
+import { mapAction } from 'vuex'
 export default {
   components: {
     AppHeader,
     AppFooter
+  },
+  computed: {
+    ...mapAction(['watchUserAccount', 'fetchState'])
+  },
+  mounted() {
+    watchUsserAccount()
+    fetchState()
   }
 }
 </script>

@@ -44,6 +44,7 @@ contract CrowdFunding {
         applicantStage = ApplicantStages.NotAsked;
         primaryCheckPoint = 20; //percent
         secondaryCheckPoint = 60; //percent
+		emit Init(goalAmount);
     }
     
     // First Funding
@@ -51,11 +52,11 @@ contract CrowdFunding {
 	* 出資
 	*/
     function fund() public payable onlyStageAt(Stages.FirstStage){
-        investors[msg.sender].amount = msg.value;
+        investors[msg.sender].amount += msg.value;
 		numInvestors += 1;
 		helper[numInvestors] = msg.sender;
         amountRaised += msg.value;
-		emit Funded(msg.sender, msg.value, amountRaised);
+		emit Funded(msg.sender, msg.value, amountRaised, numInvestors);
     }
     
 	/** 
@@ -154,7 +155,8 @@ contract CrowdFunding {
 
 
 	//Events
-	event Funded(address _from, uint _amount, uint _totalDeposit);
+	event Init(uint _goalAmount);
+	event Funded(address _from, uint _amount, uint _totalDeposit, uint _numInvestors);
 	event Withdrawn(uint _amount);
 	event StageChanged(Stages _stage);
 	event ApplicantStageChanged(ApplicantStages _applicantStage);

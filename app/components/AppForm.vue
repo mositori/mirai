@@ -16,6 +16,7 @@
           <h3 class="form-item__title">支援金額</h3>
           <input 
             id="exampleInputEmail1" 
+            v-model="amount"
             type="number" 
             class="form-item__input" 
             placeholder="">
@@ -39,16 +40,42 @@
       </div>
       <div class="button-group my-2">
         <button class="btn btn-secondary btn-lg">戻る</button>
-        <button class="btn btn-danger btn-lg">支援金を送る</button>
+        <button 
+          class="btn btn-danger btn-lg" 
+          @click="fund(amount)">支援金を送る</button>
       </div>
     </div>
   </div>
 </template>
 <script>
+import { web3, contract } from '~/plugins/web3'
 export default {
   data() {
     return {
-      address: '0x1234567890ABCDEF'
+      address: '0x1234567890ABCDEF',
+      amount: 0
+    }
+  },
+  mounted() {
+    contract.events.Funded().on('data', event => {
+      let data = event.returnValues
+      console.log(data)
+    })
+  },
+  methods: {
+    async fund(_amount) {
+      let accountAddress = await web3.eth.getAccounts()
+      contract.methods.fund().send(
+        {
+          from: accountAddress[0],
+          value: web3.utils.toWei(String(_amount), 'Wei')
+        },
+        (err, hash) => {
+          if (!err) {
+            console.log(hash)
+          }
+        }
+      )
     }
   }
 }
