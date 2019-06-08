@@ -13,13 +13,20 @@
 .top-image {
   width: 100%;
   height: 60vh;
+  margin: 0 auto;
   background-image: url('../assets/images/background.png');
   background-size: cover;
   color: $color--white;
   &__main-title {
-    font-size: $font-size--xxlarge;
+    font-size: $font-size--xxxlarge;
+    font-weight: 600;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0.21rem;
   }
   &__subtitle {
+    font-size: $font-size--large;
+    text-align: center;
   }
   &__logo {
   }
