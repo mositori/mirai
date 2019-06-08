@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="row my-4">
-      <div class="col-md-8">
+      <div class="col-md-9">
         <post-main-text />>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <post-console />
       </div>
     </div>

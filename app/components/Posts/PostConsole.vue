@@ -40,13 +40,17 @@
   &__title {
     font-size: $font-size--smedium;
     margin-bottom: 10px;
+    font-weight: 600;
   }
   &__main {
     font-size: $font-size--xxlarge;
+    font-weight: 600;
   }
   &__btn {
     display: inline-block;
     margin: 0 auto;
+    font-size: 18px;
+    width: 100%;
   }
 }
 </style>
