@@ -13,7 +13,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x04e5fccb"
     },
     {
       "constant": true,
@@ -27,7 +28,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x132ae5e9"
     },
     {
       "constant": true,
@@ -41,7 +43,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x19a28e15"
     },
     {
       "constant": true,
@@ -55,7 +58,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x216340c3"
     },
     {
       "constant": true,
@@ -69,7 +73,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x2636b945"
     },
     {
       "constant": true,
@@ -96,7 +101,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x6f7bc9be"
     },
     {
       "constant": true,
@@ -110,7 +116,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x7b3e5e7b"
     },
     {
       "constant": true,
@@ -124,7 +131,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x8da5cb5b"
     },
     {
       "constant": true,
@@ -138,7 +146,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0xc040e6b8"
     },
     {
       "constant": true,
@@ -157,7 +166,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0xdabf7ec4"
     },
     {
       "constant": true,
@@ -171,13 +181,15 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0xe2818bf3"
     },
     {
       "inputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "constructor"
+      "type": "constructor",
+      "signature": "constructor"
     },
     {
       "anonymous": false,
@@ -199,7 +211,8 @@
         }
       ],
       "name": "Funded",
-      "type": "event"
+      "type": "event",
+      "signature": "0xcd909ec339185c4598a4096e174308fbdf136d117f230960f873a2f2e81f63af"
     },
     {
       "anonymous": false,
@@ -211,7 +224,8 @@
         }
       ],
       "name": "Withdrawn",
-      "type": "event"
+      "type": "event",
+      "signature": "0x430648de173157e069201c943adb2d4e340e7cf5b27b1b09c9cb852f03d63b56"
     },
     {
       "anonymous": false,
@@ -223,7 +237,8 @@
         }
       ],
       "name": "StageChanged",
-      "type": "event"
+      "type": "event",
+      "signature": "0x273467821f33675618854603ef917ebcec8a1a39f95c43d5564ed1aefab870b3"
     },
     {
       "anonymous": false,
@@ -235,7 +250,8 @@
         }
       ],
       "name": "ApplicantStageChanged",
-      "type": "event"
+      "type": "event",
+      "signature": "0xf70cc1ad704aee0ee997f9f4a8166dee9759268af59ecd26cf545c97f7903ea1"
     },
     {
       "constant": false,
@@ -244,7 +260,8 @@
       "outputs": [],
       "payable": true,
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xb60d4288"
     },
     {
       "constant": false,
@@ -253,7 +270,8 @@
       "outputs": [],
       "payable": true,
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xe9b5a2f7"
     },
     {
       "constant": false,
@@ -262,7 +280,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xb7ee99c0"
     },
     {
       "constant": false,
@@ -276,7 +295,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x1870a6c8"
     },
     {
       "constant": false,
@@ -285,7 +305,8 @@
       "outputs": [],
       "payable": true,
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x3d363f15"
     },
     {
       "constant": false,
@@ -294,7 +315,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xe8bd6d87"
     },
     {
       "constant": false,
@@ -308,7 +330,8 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xcce2de58"
     },
     {
       "constant": false,
@@ -317,7 +340,8 @@
       "outputs": [],
       "payable": true,
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x8539553c"
     },
     {
       "constant": true,
@@ -335,7 +359,8 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x79502c55"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"secondaryCheckPoint\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"numInvestors\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_approve\",\"type\":\"bool\"}],\"name\":\"secondFund\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"primaryCheckPoint\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"amountPaid\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"goalAmount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"secondWithdraw\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"investors\",\"outputs\":[{\"name\":\"amount\",\"type\":\"uint256\"},{\"name\":\"secondPay\",\"type\":\"bool\"},{\"name\":\"thirdPay\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"config\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"amountRaised\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"thirdWithdraw\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"fund\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"firstRequest\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"stage\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_approve\",\"type\":\"bool\"}],\"name\":\"thirdFund\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"helper\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"applicantStage\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"secondRequest\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"firstWithdraw\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"_amount\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_totalDeposit\",\"type\":\"uint256\"}],\"name\":\"Funded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"Withdrawn\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_stage\",\"type\":\"uint8\"}],\"name\":\"StageChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_applicantStage\",\"type\":\"uint8\"}],\"name\":\"ApplicantStageChanged\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{\"firstWithdraw()\":{\"notice\":\"\\u5f15\\u304d\\u51fa\\u3057\"},\"fund()\":{\"notice\":\"\\u51fa\\u8cc7\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/shimotori/workspace/hackathon/mirai/blockchain/contracts/CrowdFunding.sol\":\"CrowdFunding\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/shimotori/workspace/hackathon/mirai/blockchain/contracts/CrowdFunding.sol\":{\"keccak256\":\"0x626e4d8a8c723f4cb5c319a1bad398723dd3f8c96ef30e9bc96f73c2f7cb5153\",\"urls\":[\"bzzr://0faabe769d095efbec7271dd7e7851f68a9860ae5cbc922bd25d7d5c9eaf7ced\"]},\"/Users/shimotori/workspace/hackathon/mirai/blockchain/contracts/SafeMath.sol\":{\"keccak256\":\"0x5529a09ca96e4da2b5b011221de54e24a958708fa20fef69710c90fae407dcef\",\"urls\":[\"bzzr://e56429bf1fa273f581c3db2012cc4f1c096d70bf23ad6775b851c9a831b21f21\"]}},\"version\":1}",
@@ -12707,9 +12732,16 @@
     "name": "solc",
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xF8493457A16DFfFdD3EFa455e236CEC9F95a4bA1",
+      "transactionHash": "0x8245140485475e51c00f2499278019234b27ea46d4e0176cdf6f744c6d67aa00"
+    }
+  },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-06-08T17:24:06.412Z",
+  "updatedAt": "2019-06-08T18:37:41.800Z",
   "devdoc": {
     "methods": {}
   },

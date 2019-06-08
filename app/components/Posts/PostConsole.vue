@@ -3,24 +3,24 @@
     <div class="row">
       <div class="item">
         <h3 class="item__title">集まっている金額</h3>
-        <h2 class="item__main">254.444 ETH</h2>
+        <h2 class="item__main">{{ deposited }} ETH</h2>
         <div class="progress">
           <div 
-            class="progress-bar bg-success" 
-            role="progressbar" 
-            style="width: 25%;" 
-            aria-valuenow="25" 
+            :style="{width: progress + '%'}" 
+            class="progress-bar bg-success"
+            role="progressbar"
+            aria-valuenow="`${progress}`" 
             aria-valuemin="0" 
-            aria-valuemax="100">25%</div>
+            aria-valuemax="100">{{ progress }}%</div>
         </div>
       </div>
       <div class="item">
         <h3 class="item__title">目標金額</h3>
-        <h2 class="item__main">300 ETH</h2>
+        <h2 class="item__main">{{ goalAmount }} ETH</h2>
       </div>
       <div class="item">
         <h3 class="item__title">応援している人</h3>
-        <h2 class="item__main">140 人</h2>
+        <h2 class="item__main">{{ numInvestors }} 人</h2>
       </div>
       <div class="item">
         <h3 class="item__title">残り日数</h3>
@@ -30,6 +30,36 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    deposited: {
+      type: Number,
+      default: 0
+    },
+    goalAmount: {
+      type: Number,
+      default: 0
+    },
+    numInvestors: {
+      type: Number,
+      default: 0
+    }
+  },
+  computed: {
+    progress() {
+      if (this.goalAmount == 0) {
+        return 0
+      }
+      if (this.eposited / this.goalAmount > 1) {
+        return 100
+      }
+      return (this.deposited / this.goalAmount) * 100
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 @import '~assets/scss/style';
 

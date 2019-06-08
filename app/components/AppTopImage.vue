@@ -8,7 +8,10 @@
         alt="Logo" 
         class="top-image__logo">
     </div>
-    <button class="btn btn-success btn-lg top-image__btn">プロジェクトを支援する</button>
+    <nuxt-link to="posts">
+      <button 
+        class="btn btn-success btn-lg top-image__btn">プロジェクトを支援する</button>
+    </nuxt-link>
   </div>
 </template>
 

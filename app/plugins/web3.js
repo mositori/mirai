@@ -1,5 +1,5 @@
 import Web3 from 'web3'
-import CrowdFunding from '@/../blockchain/build/contracts/CrowdFunding'
+import CrowdFunding from '../../blockchain/build/contracts/CrowdFunding'
 
 let web3
 
