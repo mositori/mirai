@@ -4,7 +4,7 @@
       <!--<li v-for="todo in todos">-->
       <div class="card">
         <img 
-          src="../icon.png" 
+          src="../assets/images/markus-spiske-973768-unsplash.jpg" 
           class="card-img-top" >
         <div  
           id="app" 
@@ -77,8 +77,10 @@ export default {
 }
 
 .card {
-  width: 300px;
-  left: 100px;
+  width: 200px;
+  left: 50px;
+  margin: 20px;
+  text-align: center;
   background-position: center center;
 }
 
