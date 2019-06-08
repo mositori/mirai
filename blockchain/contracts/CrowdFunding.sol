@@ -1,7 +1,7 @@
 pragma solidity ^0.5.8;
 import "./SafeMath.sol";
 
-contract CloudFunding {
+contract CrowdFunding {
 	using SafeMath for uint;
     enum Stages {
         FirstStage,
