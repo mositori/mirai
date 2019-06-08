@@ -1,8 +1,8 @@
 pragma solidity ^0.5.8;
 import "./SafeMath.sol";
 
-contract core {
-	using SafeMath for uint256;
+contract CloudFunding {
+	using SafeMath for uint;
     enum Stages {
         FirstStage,
         SecondStage,
@@ -33,7 +33,7 @@ contract core {
     uint public primaryCheckPoint;
     uint public secondaryCheckPoint;
     mapping (address => Investor) public investors;
-	mapping (uint => address) public helper;
+	mapping (uint => address payable) public helper;
     
     
     // Initialize
@@ -47,62 +47,93 @@ contract core {
     }
     
     // First Funding
+	/** 
+	* 出資
+	*/
     function fund() public payable onlyStageAt(Stages.FirstStage){
         investors[msg.sender].amount = msg.value;
-		numInvestors.add(1);
+		numInvestors += 1;
 		helper[numInvestors] = msg.sender;
-        amountRaised.add(msg.value);
+        amountRaised += msg.value;
+		emit Funded(msg.sender, msg.value, amountRaised);
     }
     
-    function firstEarn() public payable onlyOwner onlyStageAt(Stages.FirstStage){
+	/** 
+	* 引き出し
+	*/
+    function firstWithdraw() public payable onlyOwner onlyStageAt(Stages.FirstStage){
         require(amountRaised >= goalAmount);
-        owner.transfer(amountRaised * primaryCheckPoint / 100);
-		amountPaid.add(amountRaised * primaryCheckPoint / 100);
+		uint _amount = amountRaised * primaryCheckPoint / 100;
+        owner.transfer(_amount);
+		amountPaid += _amount;
+		emit Withdrawn(_amount);
+
         stage = Stages.SecondStage;
+		emit StageChanged(stage);
     }
     
     function firstRequest() public onlyOwner onlyStageAt(Stages.SecondStage){
         applicantStage = ApplicantStages.Asked;
+		emit ApplicantStageChanged(applicantStage);
     }
     
     function secondFund(bool _approve) public onlyStageAt(Stages.SecondStage) onlyAt(ApplicantStages.Asked){
 		investors[msg.sender].secondPay = _approve;
     }
 
-	function secondEarn() public payable onlyOwner onlyStageAt(Stages.SecondStage) onlyAt(ApplicantStages.Asked) {
+	function secondWithdraw() public payable onlyOwner onlyStageAt(Stages.SecondStage) onlyAt(ApplicantStages.Asked) {
 		uint _amount;
 		for(uint i = 1; i <= numInvestors; i++) {
 			if(investors[helper[i]].secondPay) {
 				_amount.add( investors[helper[i]].amount * (secondaryCheckPoint - primaryCheckPoint) / 100 );
+			} else {
+				helper[i].transfer(investors[helper[i]].amount * (100 - primaryCheckPoint) / 4);
 			}
 		}
 
 		owner.transfer(_amount);
+		emit Withdrawn(_amount);
 		stage = Stages.ThirdStage;
+		emit StageChanged(stage);
 		applicantStage = ApplicantStages.NotAsked;
+		emit ApplicantStageChanged(applicantStage);
 	}
 
 	function secondRequest() public onlyOwner onlyStageAt(Stages.ThirdStage){
 		applicantStage = ApplicantStages.Asked;
+		emit ApplicantStageChanged(applicantStage);
 	}
 
 	function thirdFund(bool _approve) public onlyStageAt(Stages.ThirdStage) onlyAt(ApplicantStages.Asked){
 		investors[msg.sender].thirdPay = _approve;
     }
 
-	function thirdEarn() public payable onlyOwner onlyStageAt(Stages.ThirdStage) onlyAt(ApplicantStages.Asked) {
+	function thirdWithdraw() public payable onlyOwner onlyStageAt(Stages.ThirdStage) onlyAt(ApplicantStages.Asked) {
 		uint _amount;
 		for(uint i = 1; i <= numInvestors; i++) {
 			if(investors[helper[i]].thirdPay) {
-				_amount.add( investors[helper[i]].amount * (1 - secondaryCheckPoint) / 100 );
+				_amount.add( investors[helper[i]].amount * (100 - secondaryCheckPoint) / 100 );
 			}
 		}
 
 		owner.transfer(_amount);
+		emit Withdrawn(_amount);
 		stage = Stages.Finished;
+		emit StageChanged(stage);
 		applicantStage = ApplicantStages.NotAsked;
+		emit ApplicantStageChanged(applicantStage);
 	}
     
+
+
+	function config() public view returns(uint, uint){
+		return (numInvestors, amountRaised);
+	}
+
+
+
+
+
     // modifiers
     modifier onlyStageAt(Stages _stage) {
         require(stage == _stage);
@@ -118,4 +149,13 @@ contract core {
         require(owner == msg.sender);
         _;
     }
+
+
+
+
+	//Events
+	event Funded(address _from, uint _amount, uint _totalDeposit);
+	event Withdrawn(uint _amount);
+	event StageChanged(Stages _stage);
+	event ApplicantStageChanged(ApplicantStages _applicantStage);
 }
