@@ -8,7 +8,7 @@
         alt="Logo" 
         class="top-image__logo">
     </div>
-    <button class="btn btn-success btn-lg top-image__btn">プロジェクトを始める</button>
+    <button class="btn btn-success btn-lg top-image__btn">プロジェクトを支援する</button>
   </div>
 </template>
 
