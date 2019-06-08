@@ -36,7 +36,7 @@
         <li class="nav-item">
           <a 
             class="nav-link" 
-            href="./detail1">ミライとは？</a>
+            href="..">ミライとは？</a>
         </li>
         <li class="nav-item">
           <a 
@@ -50,6 +50,7 @@
         </li>
       </ul>
     </div>
+
   </nav>
 
 </template>
