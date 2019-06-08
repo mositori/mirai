@@ -12,8 +12,8 @@
           <!--<h3 
             class="card-title">nishida</h3>-->
           <h1 
-            class="crad-title" 
-            name="head">{{ title }}
+            class="card-title" 
+          >{{ title }}
           </h1>
           <div class="progress">
             <div 
@@ -50,6 +50,18 @@ export default {
     },
     image: {
       type: String,
+      required: true
+    },
+    progress: {
+      type: Number,
+      required: true
+    },
+    remaining: {
+      type: Number,
+      required: true
+    },
+    funded: {
+      type: Number,
       required: true
     }
   }
