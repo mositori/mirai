@@ -24,7 +24,10 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    'reset-css', // 上記でインスールしていれば
+    '~/assets/scss/style.scss'
+  ],
 
   /*
   ** Plugins to load before mounting the App
