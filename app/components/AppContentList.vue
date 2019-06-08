@@ -1,15 +1,18 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row"><!--
       <div 
         v-for="(post,i) in pseudoPosts"
         :key="i"
         class="col-md-3">
         <app-content v-bind="post" />
+      </div>-->
+      <div>
+        <app-content v-bind="post" />
+        <div/>
       </div>
     </div>
-  </div>
-</template>
+</div></template>
 <script>
 import AppContent from '~/components/AppContent'
 export default {

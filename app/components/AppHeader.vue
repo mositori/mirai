@@ -17,7 +17,8 @@
         class="navbar-brand" 
         href="#"><img 
           id="logo" 
-          src="~assets/images/logo.png">
+          src="~assets/images/logo.png" 
+          width="80" >
       </a>
       <form class="form-inline my-2 my-lg-0">
         <input 
