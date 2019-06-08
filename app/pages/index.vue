@@ -9,15 +9,16 @@
 import AppTopImage from '~/components/AppTopImage.vue'
 import AppFundingList from '~/components/AppFundingList.vue'
 import AppContentList from '~/components/AppContentList.vue'
+import AppContent from '~/components/AppContent.vue'
 export default {
   components: {
     AppTopImage,
     AppFundingList,
-    AppContentList
+    AppContentList,
+    AppContent
   }
 }
 </script>
-
 
 <style style="scss" scoped>
 /* Transparent
