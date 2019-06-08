@@ -28,9 +28,10 @@
         </div>
         <div class="card-footer">
           <ul>
-            <li><small 
-              id="day" 
-              class="text-muted">19日</small></li>
+            <li>
+              <small 
+                id="day" 
+                class="text-muted">19日</small></li>
             <li><small 
               id="money" 
               class="text-muted">17.235ETH</small></li>
@@ -82,6 +83,12 @@ export default {
   margin: 20px;
   text-align: center;
   background-position: center center;
+}
+
+#clock {
+  width: 30px;
+  display: left;
+  flex: left;
 }
 
 .text-muted {

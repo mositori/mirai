@@ -15,7 +15,9 @@
       class="collapse navbar-collapse">
       <a 
         class="navbar-brand" 
-        href="#">Hidden brand
+        href="#"><img 
+          id="logo" 
+          src="~assets/images/logo.png">
       </a>
       <form class="form-inline my-2 my-lg-0">
         <input 
