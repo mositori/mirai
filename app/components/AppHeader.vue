@@ -54,7 +54,7 @@
 
 </template>
 
-<style scoped>
+<style style="scss" scoped>
 /* Transparent
 /* 
 /*.navbar-default {

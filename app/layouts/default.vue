@@ -1,15 +1,15 @@
 <template>
   <div>
-    <header />
+    <app-header />
     <nuxt/>
   </div>
 </template>
 <script>
-import header from '~/components/header.vue'
+import AppHeader from '~/components/AppHeader.vue'
 
 export default {
   components: {
-    header
+    AppHeader
   }
 }
 </script>

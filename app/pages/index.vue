@@ -1,11 +1,17 @@
 <template>
-  <div>test</div>
+  <app-top-image />
 </template>
-
 <script>
+import AppTopImage from '~/components/AppTopImage.vue'
+export default {
+  components: {
+    AppTopImage
+  }
+}
 </script>
 
-<style scoped>
+
+<style style="scss" scoped>
 /* Transparent
       /* 
       /*.navbar-default {
