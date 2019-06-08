@@ -1,12 +1,19 @@
 <template>
   <div class="row">
     <div class="col-xs-8">
+      <!--<li v-for="todo in todos">-->
       <div class="card">
         <img 
           src="../icon.png" 
           class="card-img-top" >
-        <div class="card-body">
-          <h3 class="card-title">若者に平和のための教育をしたい</h3>
+        <div  
+          id="app" 
+          class="card-body">
+          <!--<h3 
+            class="card-title">nishida</h3>-->
+          <slot 
+            class="crad-title" 
+            name="head"/>
           <div class="progress">
             <div 
               class="progress-bar bg-success" 
@@ -29,10 +36,10 @@
           </ul>
         </div>
       </div>
+      <!--</li>-->
     </div>
   </div>
 </template>
-
 <style lang="scss" scoped>
 @import '~assets/scss/style';
 
@@ -43,6 +50,7 @@
 
 .card {
   width: 300px;
+  left: 100px;
   background-position: center center;
 }
 
