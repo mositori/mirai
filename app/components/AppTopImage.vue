@@ -2,8 +2,13 @@
   <div class="top-image">
     <h1 class="top-image__main-title">みんなのミライに投資しよう</h1>
     <h3 class="top-image__subtitle">トラストレスクラウドファンディング</h3>
-    <div class="top-image-logo"/>
-    <div class="button">プロジェクトを始める</div>
+    <div class="top-image-logo">
+      <img 
+        src="~assets/images/logo.png" 
+        alt="Logo" 
+        class="top-image__logo">
+    </div>
+    <button class="btn btn-success btn-lg top-image__btn">プロジェクトを始める</button>
   </div>
 </template>
 
@@ -12,11 +17,15 @@
 
 .top-image {
   width: 100%;
-  height: 60vh;
   margin: 0 auto;
+  padding: 120px 0;
   background-image: url('../assets/images/background.png');
   background-size: cover;
   color: $color--white;
+  text-align: center;
+  & > *:not(:last-child) {
+    margin-bottom: 25px;
+  }
   &__main-title {
     font-size: $font-size--xxxlarge;
     font-weight: 600;
@@ -29,9 +38,14 @@
     text-align: center;
   }
   &__logo {
+    width: 150px;
+  }
+  &__btn {
+    opacity: 0.8;
   }
 }
 
 .top-image-logo {
+  text-align: center;
 }
 </style>
