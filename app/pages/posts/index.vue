@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+import { web3, contract } from '~/plugins/web3'
 import PostConsole from '~/components/Posts/PostConsole'
 import PostMainText from '~/components/Posts/PostMainText'
 export default {
