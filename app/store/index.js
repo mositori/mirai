@@ -5,7 +5,7 @@ const store = {
   state: {
     contracts: {
       amountRaised: 0,
-      goalAmount: 0,
+      goalAmount: 100,
       numInvestors: 0
     }, //0 => CorpToken, 1 => Token
     account: {
@@ -28,6 +28,9 @@ const store = {
     },
     setNumInvestors(state, payload) {
       state.contracts.numInvestors = payload
+    },
+    setGoadAmount(state, payload) {
+      state.contracts.goalAmount = payload
     }
   },
   actions: {
@@ -39,9 +42,6 @@ const store = {
           commit('setUserAddress', userAddress)
         }
       }, 1000)
-      contract.getPastEvents('Init').then(event => {
-        console.log(event)
-      })
     },
     async fetchState({ state, commit }) {
       contract.events.Funded().on('data', event => {
@@ -51,6 +51,15 @@ const store = {
         commit('setDeposited', deposited)
         commit('setNumInvestors', numInvestors)
       })
+    },
+    async firstWithdraw({ state, commit }) {
+      let accountAddress = await web3.eth.getAccounts()
+      contract.methods
+        .firstWithdraw()
+        .call({ from: accountAddress[0] })
+        .then(res => {
+          this.$toasted.success(res)
+        })
     }
   }
 }
