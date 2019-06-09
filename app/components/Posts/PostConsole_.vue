@@ -27,9 +27,9 @@
         <h2 class="item__main">4日</h2>
       </div>
       <button class="btn btn-danger btn-lg item__btn">プロジェクトを支援する</button>
-      <button 
+      <!--<button 
         class="btn btn-danger btn-lg item__btn" 
-        @click="firstWithdraw">引出し(志願者のみ)</button>
+        @click="firstWithdraw">引出し(志願者のみ)</button>-->
     </div>
   </div>
 </template>
