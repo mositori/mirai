@@ -18,7 +18,6 @@ export default {
 }
 </script>
 
-
 <style style="scss" scoped>
 /* Transparent
       /* 
